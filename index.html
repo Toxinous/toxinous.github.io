@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+
+@-webkit-keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
+
+.flicker:hover {
+	-webkit-animation-name: flash;
+	-webkit-animation-duration: 1s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes rubberBand {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(.95, 1.05, 1);
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, .95, 1);
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes rubberBand {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(.95, 1.05, 1);
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, .95, 1);
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.rubberBand {
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand;
+}
+
+.band:hover {
+	-webkit-animation-name: rubberBand;
+	-webkit-animation-duration: 0.75s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes flip {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+    transform: perspective(400px) scale3d(.95, .95, .95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes flip {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+    transform: perspective(400px) scale3d(.95, .95, .95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+}
+
+.animated.flip {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-animation-name: flip;
+  animation-name: flip;
+}
+
+.fwirl:hover {
+	-webkit-animation-name: flip;
+	-webkit-animation-duration: 1s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes shooken {
+  0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+  10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+	30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+	40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+	50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+	70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shake:hover,
+.shake:focus {
+	-webkit-animation-name: shooken;
+	-webkit-animation-duration: 0.8s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+body {
+    background-image: url("http://orig11.deviantart.net/7974/f/2017/011/5/a/fores_by_lahlly-dav3li7.png");
+}
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    margin: 0.25px;
+    padding: 15px 50px;
+    border: 0px;
+    overflow: hidden;
+    text-decoration: none;
+    outline: none;
+    color: #ffffff;
+    background: #FF8000;
+}
+
+.button.invr {
+    color: #ff8000;
+    background: #ffffff;
+}
+
+.notlink {
+    cursor: default;
+}
+
+.smol {
+    padding: 15px 56px;
+}
+
+.button span {
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.button:before{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: .4s,opacity .6s;
+    -moz-transition: .4s,opacity .6s;
+    -o-transition: .4s,opacity .6s;
+    transition: .4s,opacity .6s;
+}
+
+.button:before {
+    content: attr(data-hover);
+    -webkit-transform: translate(-150%,0);
+    -moz-transform: translate(-150%,0);
+    -ms-transform: translate(-150%,0);
+    -o-transform: translate(-150%,0);
+    transform: translate(-150%,0);
+}
+
+.button:hover span,
+.button:active span {
+    opacity: 0;
+}
+
+.button:hover:before,
+.button:active:after {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+    -webkit-transition-delay: .4s;
+    -moz-transition-delay: .4s;
+    -o-transition-delay: .4s;
+    transition-delay: .4s;
+}
+
+.jumbotron.or {
+    background-color:#FF8000;
+}
+
+.jumbotron.wh {
+    background-color:#FF8000;
+}
+
+a.nodec {
+    text-decoration: none;
+}
+
+img.transp {
+    opacity: 0.5;
+}
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.whb {
+    background-color: #ffffff;
+    border: 2px solid #d9d9d9;
+    padding: 0px 14px;
+}
+
+.bwhb {
+    background-color: #ffffff;
+    border: 2px solid #d9d9d9;
+    width: 196px;
+}
+
+.stamps {
+    margin-left: 40px;
+    margin-right: 35px;
+    margin-top: 33.5px;
+}
+</style>
+<html>
+<div class="container">
+
+<div class="jumbotron or" onselectstart="return false">
+<div class="shake" align="center">
+<header>
+<font face="Comic Sans MS" color="white">
+<h1><span class="glyphicon glyphicon-trash"></span><span style="cursor:default"> Welcome to Trash™ </span><span class="glyphicon glyphicon-trash"></span></h1></font><br>
+</header></div></div></div>
+
+<!---panda pic 1-->
+
+<div class="container">
+<div class="row no-gutters">
+<div align="justified" class="col-lg-2"><div class="whb"></br>
+<font face="lucida console" size="1" color="#ff8000">
+<p>hi hi welcome to<img src="http://orig03.deviantart.net/07ba/f/2016/363/4/b/coneda_by_lahlly-datc8cb.gif" align="right" width="64" class="flicker"> my website</p>
+i draw <small><small>sometimes</small></small></p>
+<p><u>3DS FC</u></br>
+[ 39<i>69</i> - <i>69</i>32 - 3387 ]</p>
+<p>i love traffic cones and red pandas</br>
+but you probably knew that</p>
+<p>tigers aren't my favorite
+but i love <a href="http://twitter.com/tigercaptain_"><font color="#cc6600"><b>this one</b></font></a></br></p>
+
+<div align="center"><p><b><i>MY SISTER IS A THOT<br>GO FOLLOW HER</i></b></br>
+<a href="http://twitter.com/abovegalaxies"><b><font color="#cc6600">Twitter</font></b></a> | <a href="http://galacticskies.deviantart.com/"><b><font color="#cc6600">DeviantArt</font></b></a>
+
+</div></div></div><div align="center" class="col-lg-2">
+
+<img src="http://orig08.deviantart.net/a5e3/f/2016/363/0/f/snooze_by_lahlly-datd275.jpg" height="272" width="192">
+
+</div><div class="col-lg-4" align="center">
+<a href="https://discord.gg/ZbEfM9n"><button class="button invr" type="button" data-hover="Red Pandas 101"><span>Join my Discord!</span></button></br></br>
+<img src="http://orig13.deviantart.net/a0ac/f/2017/001/8/2/pandacord_by_lahlly-datsasv.png" class="img-circle fwirl"></a></div>
+
+<!---social media 4-->
+
+</br><div align="right"><div class="col-lg-2" align="center"><div class="bwhb"></br>
+   <u>Social Media <span class="glyphicon glyphicon-pencil"></span></u></p>
+<a href="http://twitter.com/toxinous"><button class="button" type="button" data-hover="@Toxinous"><span>Twitter</span></button></a></br>
+<a href="http://steamcommunity.com/id/Lahllypop"><button class="button smol" type="button" data-hover="Lahllypop"><span>Steam</span></button></a></br>
+<button class="button notlink" type="button" data-hover="Toxinous#9253"><span>Discord</span></button></br>
+<button class="button notlink smol" type="button" data-hover="Toxinous.exe"><span>Skype</span></button></br></br></p>
+</div></div></div>
+
+<!---image-->
+
+<div class="col-lg-1 stamps" align="center"><a href="lahlly.deviantart.com/art/Red-Panda-Stamp-654002301"><img src="http://orig09.deviantart.net/b31f/f/2016/363/7/8/red_panda_stamp_by_lahlly-datdjel.png" class="transp band"></a></p>
+<a href="http://lahlly.deviantart.com/art/Sriracha-Stamp-654003754"><img src="http://orig13.deviantart.net/94a2/f/2016/363/a/d/adc3eabcb7a90ac634b63a4d9cc65755-datdkiy.png" class="transp band"></a></p>
+<a href="http://lahlly.deviantart.com/art/Hot-Cheetos-Stamp-654002294"><img src="http://orig09.deviantart.net/6343/f/2016/363/7/b/7bf245b81be14598682445f86cc3ddd4-datdjee.png" class="transp band"></a></p>
+</div></p></div></div></br></p>
+
+<!---Pandas <3-->
+<div class="container-fluid">
+<div align="center">
+<img src="http://orig05.deviantart.net/4d74/f/2016/362/f/9/spook_by_lahlly-dat55ll.gif" class="img-rounded" height="250" width="375">
+<img src="http://jointhepanda.com/wp-content/uploads/red-panda-liegend-500x4001.jpg" class="img-rounded" height="250">
+<img src="http://orig15.deviantart.net/6fbf/f/2016/362/4/3/hug_by_lahlly-dat8ncz.gif" class="img-rounded" height="250" width="375">
+</div></br></body></html>
+
